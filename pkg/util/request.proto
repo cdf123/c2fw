@@ -1,0 +1,17 @@
+syntax="proto3";
+
+option go_package = "github.com/cdf123/c2fw/pkg/util";
+
+package main;
+
+message Parameter {
+	optional string name = 1;
+	string value = 2;
+}
+
+message Request {
+	uint64 instance = 1;
+	uint32 type = 2;
+	string command = 3;
+	repeated Parameter parameter = 4;
+}

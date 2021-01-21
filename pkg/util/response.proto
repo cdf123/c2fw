@@ -1,0 +1,17 @@
+syntax="proto3";
+
+option go_package = "github.com/cdf123/c2fw/pkg/util";
+
+package main;
+
+message Output {
+	string stdout = 1;
+	optional string stderr = 2;
+}
+
+message Response {
+	uint64 instance = 1;
+	int32 status = 2;
+	optional Output output = 3;
+}
+
